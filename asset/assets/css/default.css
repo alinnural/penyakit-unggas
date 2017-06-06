@@ -1,0 +1,27 @@
+body {
+	font-family: 'Open Sans',verdana,arial,sans-serif;
+	font-size:11px; 
+	margin: 0px;
+	padding: 0px;
+}
+
+.wrap { 
+	width:50%; 
+	background:#F0F0F0; 
+	margin:auto;
+	padding: 25px;
+	overflow: hidden;
+}
+
+h1 {
+	text-align: center;
+}
+
+input.nama {
+	font-size:18px; 
+	width:350px;
+}
+
+input, textarea {
+    border: 1px solid #CCC;
+}

@@ -1,0 +1,99 @@
+table.normal{margin:1px;}
+table.tbisi{margin-top:-5px;}
+input.wajib,select.wajib,textarea.wajib{border-color:#FF0000}
+input.date{width:80px;}
+input.numtext,input.stext, input.text, input.provinsi, input.kota, input.mtext, input.ltext, input.sstext, input.ssstext,input.dtext{} 
+.numtext:hover, .stext:hover, .sstext:hover, .ssstext:hover, input:hover, .mtext:hover,.numtext:mousedown, .stext.mousedown, .ssstext.mousedown, .text:hover, .text.mousedown{background-color:#d9e3ef;}
+.numtext.wajib,.stext.wajib, .sstext.wajib, .ssstext.wajib, .ltext.wajib, .mtext.wajib, .text.wajib,.dtext.wajib{background-color:#edaeae;}
+.stext.format, .sstext.format, .ssstext.format, .ltext.format, .mtext.format, .text.format, .dtext.format{background-color:#39C;}
+.textx{border:1px solid #bdbdbd;padding:2px;font-family:Lucida Grande, Verdana, Sans-serif;font-size:11px;width:221px;line-height:16px;}
+.stext{border:1px solid #bdbdbd;padding:2px;font-family:Lucida Grande, Verdana, Sans-serif;font-size:11px;width:121px;line-height:16px;}
+.sstext{border:1px solid #bdbdbd;padding:2px;font-family:Lucida Grande, Verdana, Sans-serif;font-size:11px;width:95px;line-height:16px;}
+.numtext{border:1px solid #bdbdbd;padding:2px;font-family:Lucida Grande, Verdana, Sans-serif;font-size:11px;width:35px;line-height:16px;}
+.ssstext{border:1px solid #bdbdbd;padding:2px;font-family:Lucida Grande, Verdana, Sans-serif;font-size:11px;width:40px;line-height:16px;}
+.mtext{border:1px solid #bdbdbd;padding:2px;font-family:Lucida Grande, Verdana, Sans-serif;font-size:11px;width:280px;line-height:16px;}
+.ltext{border:1px solid #bdbdbd;padding:2px;font-family:Lucida Grande, Verdana, Sans-serif;font-size:11px;width:182px;line-height:16px;}
+.dtext{border:1px solid #bdbdbd;padding:2px;font-family:Lucida Grande, Verdana, Sans-serif;font-size:11px;width:195px;line-height:16px;}
+.xtext{border:1px solid #bdbdbd;padding:2px;font-family:Lucida Grande, Verdana, Sans-serif;font-size:11px;width:271px;line-height:16px;}
+select.mtext{width:286px;}
+select.text{width:227px;}
+a.button{display:inline-block;height:28px;padding:0 0 0 3px;font-size:11px;font-weight:bold;color:#333;text-shadow:1px 1px 0 #fff;background:url(../img/_button.png) 0 0 no-repeat;white-space:nowrap;border:none;overflow:visible;cursor:pointer;text-decoration:none;margin-top:0px;}
+a.button>span{display:block;height:28px;padding:1px 10px 0 8px;line-height:23px;background:url(../img/_button.png) 100% 0 no-repeat;}
+a.button:hover, a.minibutton:focus{color:#fff;text-decoration:none;text-shadow:-1px -1px 0 rgba(0,0,0,0.3);background-position:0 -35px;}
+a.button:hover>span, a.minibutton:focus>span{background-position:100% -35px;}
+a.button.mousedown{background-position:0 -60px;}
+a.button.mousedown>span{background-position:100% -60px;}
+a.save .icon{float:left;margin:1px 0 0 -4px;width:18px;height:22px;background:url(../img/_icon.png) 0 0 no-repeat;background-position:-75px 0;}
+a.save:hover .icon{background-position:-75px -25px;}
+a.cancel .icon{float:left;margin:1px 0 0 -4px;width:18px;height:22px;background:url(../img/_icon.png) 0 0 no-repeat;background-position:-98px 0;}
+a.cancel:hover .icon{background-position:-98px -25px;}
+a.next .icon{float:left;margin:1px 0 0 -4px;width:18px;height:22px;background:url(../img/_icon.png) 0 0 no-repeat;background-position:-117px 0;}
+a.next:hover .icon{background-position:-117px -25px;}
+a.prev .icon{float:left;margin:1px 0 0 -4px;width:18px;height:22px;background:url(../img/_icon.png) 0 0 no-repeat;background-position:-139px 0;}
+a.prev:hover .icon{background-position:-139px -25px;}
+a.signin .icon{float:left;margin:1px 0 0 -4px;width:18px;height:22px;background:url(../img/_icon.png) 0 0 no-repeat;background-position:2px 0;}
+a.signin:hover .icon, a.btn-download:focus .icon{background-position:2px -25px;}
+a.retry .icon{float:left;margin:1px 0 0 -4px;width:18px;height:22px;background:url(../img/_icon.png) 0 0 no-repeat;background-position:-18px 0;}
+a.retry:hover .icon, a.btn-download:focus .icon{background-position:-18px -25px;}
+a.add .icon{float:left;margin:0px 0 0 -1px;width:17px;height:22px;background:url(../img/_icon.png) 0 0 no-repeat;background-position:-161px 0;}
+a.del .icon{float:left;margin:0px 0 0 -1px;width:17px;height:22px;background:url(../img/_icon.png) 0 0 no-repeat;background-position:-179px 0;}
+a.info .icon{float:left;margin:0px 0 0 -1px;width:17px;height:22px;background:url(../img/_icon.png) 0 0 no-repeat;background-position:-203px 0;}
+a.search .icon{float:left;margin:0px 0 0 -1px;width:17px;height:22px;background:url(../img/_icon.png) 0 0 no-repeat;background-position:-221px 0;}
+a.search:hover .icon{background-position:-221px -25px;}
+input.add_{width:8px;height:12px;background-color:transparent;background-image:url(../img/_icon.png);background-repeat:no-repeat;background-attachment:scroll;background-position:-160px 0;padding:5px;}
+input[readonly],textarea[readonly],select[readonly]{background-color:#F5F5F5;color:#191919}
+img.info_{width:8px;height:12px;background-color:transparent;background-image:url(../img/_icon.png);background-repeat:no-repeat;background-attachment:scroll;background-position:-203px -1px;padding:5px;}
+span.info_{width:8px;height:12px;background-color:transparent;background-image:url(../img/_icon.png);background-repeat:no-repeat;background-attachment:scroll;background-position:-203px -1px;padding:5px;margin-right:5px}
+span.info_2{width:8px;background-color:transparent;background-image:url(../img/31.gif);background-repeat:no-repeat;background-attachment:scroll;padding:0px 0px 0px 5px;margin-right:5px}
+span.info_3{width:8px;background-color:transparent;background-image:url(../img/31.gif);background-repeat:no-repeat;background-attachment:scroll;padding:0px 0px 0px 5px;margin-right:5px}
+[wajib=yes]{background:#FFC}
+
+.msg {padding:6px; padding-left:35px; padding-right:10px;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}
+.msg.warn{background:url(../../img/ico-warning.gif) 10px 50% no-repeat;}
+.msg.info {background:url(../../img/ico-info.gif) 10px 50% no-repeat;}
+.msg.done {background:url(../../img/ico-done.gif) 10px 50% no-repeat;}
+.msg.err {background:url(../../img/ico-delete.gif) 10px 50% no-repeat;}
+.msg.warn {border:2px solid #F2DD8C; background-color:#FFF5CC;}
+.msg.warn a {color:#df0000;} 
+.msg.warn a:hover, .msg.warn a:active, .msg.warn a:focus {color:#303030;}
+.msg.info {border:2px solid #B8E2FB; background-color:#E8F6FF;}
+.msg.done {border:2px solid #BBDF8D; background-color:#EAF7D9;}
+.msg.err {border:2px solid #990000; background-color:#FEEBEB;}
+
+div.datepicker {position: relative;font-family: Arial, Helvetica, sans-serif;font-size: 11px;width: 196px;height: 147px;position: absolute;cursor: default;top: 0;left: 0;display: none;  z-index: 1003 !important;}
+.datepickerContainer {background: #153f6f;position: absolute;top: 2px;left: 2px;padding:2px;}
+.datepickerBorderT {position: absolute;left: 4px;top: 0;right: 4px;height: 4px;background: #777;}
+.datepickerBorderB {position: absolute;left: 4px;bottom: 0;right: 4px;height: 4px;background: #777;}
+.datepickerBorderL {position: absolute;left: 0;bottom: 4px;top: 4px;width: 4px;background: #777;}
+.datepickerBorderR {position: absolute;right: 0;bottom: 4px;top: 4px;width: 4px;background: #777;}
+.datepickerBorderTL {position: absolute;top: 0;left: 0;width: 4px;height: 4px;background: #777;}
+.datepickerBorderTR {position: absolute;top: 0;right: 0;width: 4px;height: 4px;background: #777;}
+.datepickerBorderBL {position: absolute;bottom: 0;left: 0;width: 4px;height: 4px;background: #777;}
+.datepickerBorderBR {position: absolute;bottom: 0;right: 0;width: 4px;height: 4px;background: #777;}
+.datepickerHidden {display: none;}
+div.datepicker table {border-collapse:collapse;}
+div.datepicker a {color: #eee;text-decoration: none;cursor: default;outline: none;}
+div.datepicker table td {text-align: center;padding: 1px;margin: 0;}
+div.datepicker th {text-align: center;color: #999;font-weight: normal;}
+div.datepicker tbody th {text-align: center;font-weight: bold;}
+div.datepicker tbody a {display: block;}
+.datepickerDays a {width: 20px;line-height: 16px;height: 16px;}
+.datepickerYears a, .datepickerMonths a{width: 36px;line-height: 42px;height: 36px;text-align: center;}
+td.datepickerNotInMonth a {color: #666;}
+tbody.datepickerDays td.datepickerSelected{background: #57a0c5;color: #fff;}
+tbody.datepickerDays td.datepickerNotInMonth.datepickerSelected {background: #57a0c5;}
+tbody.datepickerYears td.datepickerSelected, tbody.datepickerMonths td.datepickerSelected{background: #17384d;}
+div.datepicker a:hover {color: #aaa;cursor: pointer;}
+div.datepicker td.datepickerNotInMonth a:hover {color: #aaa;}
+div.datepicker tbody th {text-align: center;}
+.datepickerSpace div {width: 20px;}
+.datepickerGoNext a, .datepickerGoPrev a, .datepickerMonth a {text-align: center;height: 20px;line-height: 20px;}
+.datepickerGoNext a {float: right;width: 20px;}
+.datepickerGoPrev a {float: left;width: 20px;}
+table.datepickerViewDays tbody.datepickerMonths, table.datepickerViewDays tbody.datepickerYears {display: none;}
+table.datepickerViewMonths tbody.datepickerDays, table.datepickerViewMonths tbody.datepickerYears, table.datepickerViewMonths tr.datepickerDoW {display: none;}
+table.datepickerViewYears tbody.datepickerDays, table.datepickerViewYears tbody.datepickerMonths, table.datepickerViewYears tr.datepickerDoW {display: none;}
+td.datepickerDisabled a, td.datepickerDisabled.datepickerNotInMonth a{color: #333;}
+td.datepickerDisabled a:hover {color: #333;}
+td.datepickerSpecial a {background: #700;}
+td.datepickerSpecial.datepickerSelected a {background: #fff;}

@@ -1,0 +1,31 @@
+table.tabelajax{width:100%;background-color: #368EE0;text-align: left;border-collapse:collapse; color:#FFFFFF;font-family: "lucida grande", Tahoma, verdana, arial, sans-serif; font-size:11px; direction:ltr;}
+table.tabelajax tr th{padding:5px;}
+table.tabelajax tr th:last-child{}
+table.tabelajax tr th a{text-decoration:none;color:#368EE0;font-weight:bold;font-size:12px;}
+table.tabelajax tr th i{font-size:13px;}
+table.tabelajax tr th a img{vertical-align:middle}
+table.tabelajax tr th a:hover{color:#09C}
+table#Tbldetilbahanbaku tr th a:hover{color:#fff}
+table.tabelajax tr span.order{cursor:pointer;}
+table.tabelajax tr.head{border-bottom:none}
+table.tabelajax tr.head th{font-weight:normal;background-color: #FFF;color:#32597C;padding:0 0 5px 0}
+table.tabelajax tr.head .labelload{color:#FFFFFF;display:none;}
+table.tabelajax tr.head span{float:right;font-size:13px}
+table.tabelajax td{color: #3D3D3D;padding: 5px;background-color: #FFF;border-bottom:1px solid #DDDDDD;border-left:1px solid #DDDDDD;border-right:1px solid #DDDDDD;}
+.pointer{cursor:pointer;}
+table.tabelajax tr.hilite td{background-color:#E8E8E8;}table.tabelajax tr.hilites td{background-color:#F3F3F3;}
+table.tabelajax td.odd{background-color:#F3F3F3;}table.tabelajax td.alt{background-color:#FFFFFF;}
+table.tabelajax tr.selected td{background-color:#d9e3ef;}
+table.tabelajax input, table.tabelajax form {margin:0px;padding:0px;}
+table.tabelajax input.tb_chk, table.tabelajax input.tb_chkall{cursor:pointer;}
+table.tabelajax input.tb_chkall{margin-left:0px}
+table.tabelajax input.tb_chk{margin-left:1px}
+table.tabelajax input.tb_text, table.tabelajax select {border:1px solid #DDDDDD;font-family:Lucida Grande, Verdana, Sans-serif;font-size:11px;}
+table.tabelajax input.tb_text:hover, table.tabelajax input.tb_text.mousedown, table.tabelajax select:hover, table.tabelajax select.mousedown{background-color:#d9e3ef;}
+table.tabelajax input#tb_hal, table.tabelajax input#tb_view{width:40px;text-align:right;}
+table.tabelajax input#tb_cari{width:140px;}
+table.tabelajax .paging{font-size:20px;color:#32597C;position:relative;top:2px;}
+table.tabelajax .paging:hover{color: #999;}
+table.tabelajax .pdisabled{font-size:20px;color:#CCC;position:relative;top:2px;}
+input.btns[type="button"]{background-image: -moz-linear-gradient(center top , #FEFEFE 0%, #F7F7F7 50%, #F3F3F3 50%, #E6E6E6 100%);    background-repeat: repeat-x;border: 1px solid #CCCCCC; border-radius: 4px 4px 4px 4px;color: #2D2D2D;font-weight: normal;padding: 0 0px 0px;   text-shadow: 1px 1px #FFFFFF;}
+input.btns[type="button"]:hover{ background-image: -moz-linear-gradient(center top , #5E91BE 0%, #40729F 50%, #255E90 50%, #3D74A5 100%);  border-color: #326A9C; color: #FFFFFF; cursor: pointer;text-shadow: 0.1em 0.1em #666666;}

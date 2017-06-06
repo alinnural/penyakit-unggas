@@ -1,0 +1,165 @@
+
+body{
+
+background-color:#eeeeee;
+font-family: 'Open Sans', sans-serif;
+
+}
+
+#top{
+
+height:100px;
+background-image:url('../img/id2.png');
+
+}
+
+#banner{
+	
+height:100px;
+background-image:url('../img/banner.png');
+	
+}
+
+
+header, footer{
+
+width:100%;
+-webkit-box-shadow: 0px 5px 5px #757474;
+-moz-box-shadow: 0px 5px 5px #757474;
+box-shadow: 0px 5px 5px #757474;
+background-color:#6a6a6a;
+padding:5px;
+
+}
+
+#bg-header, #bg-footer{
+
+width:1024px;
+margin: 0px auto;
+background-color:#ffffff;
+border-radius: 10px;
+padding-left:10px;
+padding-right:10px;
+padding-bottom:2px;
+padding-top:2px;
+
+}
+
+#content{
+
+width:1024px;
+background-color:#eeeeee;
+margin: 0px auto;
+margin-top:2px;
+
+}
+
+#fot-content{
+
+width:1064px;
+background-color:#eeeeee;
+margin: 0px auto;
+margin-top:10px;
+
+}
+
+
+.lainnya{
+
+background-color:#f6f6f6;
+border-radius:5px;
+padding:5px;
+text-transform: capitalize;
+
+}
+
+.lainnya:hover{
+
+background-color:#ffffff;
+border-radius:5px;
+padding:5px;
+text-transform: capitalize;
+
+}
+
+.berita-tr:hover{
+
+background-color:#e8ffec;
+
+}
+
+#work {
+    
+    margin-top: 10px;
+    width: 100%;
+    height: 550px;
+    position: relative;
+    
+}
+
+#work ul li{
+    
+    display: inline-block;
+    padding-left: 15px;
+	margin-top:10px;
+    
+    
+}
+
+#work ul li img{
+    
+    width: 320px;
+    height: 170px;
+    
+    -webkit-box-shadow: 4px 7px 10px black;
+    -moz-box-shadow: 4px 7px 10px black;
+    
+    box-shadow: 4px 10px 7px black;
+    border-style: solid;
+    opacity: 0.5;
+    transition-duration: 2s;
+    border-color: white;
+    
+}
+
+#work ul li img:hover{
+ 
+    opacity: 1;
+    
+}
+
+
+#work ul li div{
+    
+    position: absolute;
+    width: 320px;
+    height: 60px;
+    opacity: 0.7;
+    margin-top: -60px;
+    color:white;		
+    background:black repeat 0 0;
+    transition-duration: 3s;
+}
+
+#work ul li div:hover{
+ 
+    opacity: 1;
+    
+    
+}
+
+#work ul li h4{
+    
+    margin-top: 3px;
+    margin-left: 5px;
+    font-family: "myfont";
+    
+}
+
+#work ul li p{
+    
+    margin-top: -15px;
+    margin-left: 5px;
+    font-family: "myfont";
+    
+}

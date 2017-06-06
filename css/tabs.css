@@ -1,0 +1,8 @@
+ul.tab {list-style:none; margin:0 !important; padding:0;	border-bottom:1px solid #666;	height:30px;}
+ul.tab li {float:left;	 text-indent:0;	padding:0;margin:0 !important;list-style-image:none !important; }
+ul.tab a { background: url(../img/blue.png) no-repeat -420px 0;font-size:12px;display:block;height: 30px;  line-height:30px;width: 134px;	text-align:center;	text-decoration:none;color:#333;padding:0px;margin:0px;	position:relative;top:1px;font-weight:bold;}
+ul.tab a:active {outline:none;}
+ul.tab a:hover {background-position: -420px -31px;	color:#fff;	}
+ul.tab a.current, ul.tab a.current:hover, ul.tab li.current a {background-position: -420px -62px;cursor:default !important; color:#000  !important;}
+#tab div {display:none;padding:15px 10px;border:1px solid #999;border-top:0;background-color:#F6F6F6;}
+
