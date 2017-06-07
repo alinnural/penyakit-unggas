@@ -7,11 +7,11 @@ Class Gejala extends CI_Controller {
 		parent::__construct();
 		$this->load->helper(array('form', 'url'));
 		$this->load->library(array('session','form_validation'));
-		$this->load->model(array('gejala_model'));
+		$this->load->model(array('gejala_model','kelompok_gejala_model'));
 	}
 
 	function index()
-	{
+	{ 
 		$data["title"] = "";
 		$data["sub_title"] = "";
 		$rows = $this->gejala_model->get_all();
@@ -24,6 +24,7 @@ Class Gejala extends CI_Controller {
 	{
 		$data['row'] = $this->gejala_model->get_by_id('');
 		$data['post'] = 'save';
+		$data['listKelompokGejala'] = $this->kelompok_gejala_model->get_list_data();
 		$this->load->view('gejala/gejala_form',$data);
 	}
 
@@ -31,13 +32,16 @@ Class Gejala extends CI_Controller {
 	{
 		$this->form_validation->set_rules('kode', 'kode','required|strip_tags');
 		$this->form_validation->set_rules('keterangan', 'keterangan','required|strip_tags');
+		$this->form_validation->set_rules('kelompok_gejala_id', 'kelompok_gejala_id','required|strip_tags');
 
 		if($this->form_validation->run() == TRUE){
 			$kode=$this->input->post("kode");
 			$keterangan=$this->input->post("keterangan");
+			$kelompok_gejala_id=$this->input->post("kelompok_gejala_id");
 
 			$data = array(
 				'kode'=>$kode,
+				'kelompok_gejala_id'=>$kelompok_gejala_id,
 				'keterangan'=>$keterangan
 			);
 			$this->gejala_model->save($data);
@@ -56,6 +60,7 @@ Class Gejala extends CI_Controller {
 		$id = $this->input->post('id');
 		$data['row'] = $this->gejala_model->get_by_id($id);
 		$data['post'] = 'update';
+		$data['listKelompokGejala'] = $this->kelompok_gejala_model->get_list_data();
 		$this->load->view('gejala/gejala_form',$data);
 	}
 
@@ -63,14 +68,17 @@ Class Gejala extends CI_Controller {
 	{
 		$this->form_validation->set_rules('kode', 'kode','required|strip_tags');
 		$this->form_validation->set_rules('keterangan', 'keterangan','required|strip_tags');
+		$this->form_validation->set_rules('kelompok_gejala_id', 'kelompok_gejala_id','required|strip_tags');
 
 		if($this->form_validation->run() == TRUE){
 			$id=$this->input->post("id");
 			$kode=$this->input->post("kode");
 			$keterangan=$this->input->post("keterangan");
+			$kelompok_gejala_id=$this->input->post("kelompok_gejala_id");
 
 			$data = array(
 				'kode'=>$kode,
+				'kelompok_gejala_id'=>$kelompok_gejala_id,
 				'keterangan'=>$keterangan
 			);
 
@@ -130,6 +138,7 @@ Class Gejala extends CI_Controller {
 			$record[] = ++$i;
 			$record[] = $temp->kode;
 			$record[] = $temp->keterangan;
+			$record[] = $temp->kelompok_gejala;
 			$record[] = "<a href=\"#\" class=\"text-yellow\" onclick=\"javascript:window_edit('".$temp->id."');\">Edit</a>&nbsp;|&nbsp;
                          <a href=\"#\"class=\"text-yellow\" onclick=\"javascript:delete_gejala('".$temp->id."');\">Delete</a>";
 			$output['aaData'][] = $record;

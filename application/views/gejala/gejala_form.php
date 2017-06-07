@@ -64,6 +64,15 @@
                                             <label>Keterangan</label>
                                             <input type="text" class="form-control" id="keterangan" name="keterangan" value="<?php echo($row['keterangan']); ?>" placeholder="Masukkan keterangan"  />
                                         </div>
+                                        <div class="form-group">
+                                            <label>Kelompok Gejala</label>
+                                            <select id="kelompok_gejala_id" class="form-control" name="kelompok_gejala_id" required>
+												<option></option>
+												<?php foreach($listKelompokGejala->result() as $value){?>
+													<option value="<?php echo $value->id ?>" <?php echo ($value->id == $row['kelompok_gejala_id']) ? 'selected':''; ?>><?php echo $value->nama ?></option>
+												<?php } ?>
+											</select>
+                                        </div>
                                     </div>
 
                                     <div class="col-md-6">

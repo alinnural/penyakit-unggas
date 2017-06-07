@@ -13,11 +13,13 @@ Class gejala_model extends CI_Model {
              $_result["id"]="";
              $_result["kode"]="";
              $_result["keterangan"]="";
+             $_result["kelompok_gejala_id"]="";
          }
          else{
             $_result["id"]=$field->id;
             $_result["kode"]=$field->kode;
             $_result["keterangan"]=$field->keterangan;
+            $_result["kelompok_gejala_id"]=$field->kelompok_gejala_id;
          }
          return $_result;
 
@@ -71,7 +73,8 @@ Class gejala_model extends CI_Model {
      }
 
      function get_by_param($param_name,$value){
-         $this->db->select('*')->from('gejala');
+         $this->db->select('gejala.*, kg.nama as kelompok_gejala,')->from('gejala');
+		 $this->db->join('kelompok_gejala as kg', 'kg.id = gp.kelompok_gejala_id');
          $this->db->where($param_name,$value);
          $query = $this->db->get();
 
@@ -82,7 +85,9 @@ Class gejala_model extends CI_Model {
      }
 
      function get_search($start, $rows, $search){
-         $sql = "select * from gejala where id like '%".$search."%' order by id asc limit ".$start.",".$rows;
+         $sql = "select gejala.*, kg.nama as kelompok_gejala from gejala 
+                    JOIN `kelompok_gejala` as kg ON `kg`.`id` = `gejala`.`kelompok_gejala_id`
+                    where gejala.id like '%".$search."%' order by gejala.id asc limit ".$start.",".$rows;
          return $this->db->query($sql);
      }
      function get_search_count($search){

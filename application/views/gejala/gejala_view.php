@@ -27,11 +27,13 @@
 						<th>No</th>
 						<th>Kode</th>
 						<th>Keterangan</th>
+						<th>Kelompok Gejala</th>
 						<th width="90px" >Aksi</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
+						<td></td>
 						<td></td>
 						<td></td>
 						<td></td>
@@ -102,6 +104,7 @@
 					{"bSearchable": false, "bSortable": false},
 					{"bSearchable": false, "bSortable": false},
 					{"bSearchable": false, "bSortable": false},
+					{"bSearchable": false, "bSortable": false},
 					
 					{"bSearchable": false, "bSortable": false, "sWidth":"90px"}
 					],
@@ -116,6 +119,7 @@
 				  $('#id').val('');
 				  $('#kode').val('');
 				  $('#keterangan').val('');
+				  $('#kelompok_gejala_id').val('');
 			  },
 			  success: function(response){
 				$("#winform").html(response);

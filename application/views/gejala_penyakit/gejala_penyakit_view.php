@@ -26,7 +26,6 @@
 					<tr>
 						<th>No</th>
 						<th>Gejala</th>
-						<th>Kelompok Gejala</th>
 						<th>Penyakit</th>
 						<th>MB</th>
 						<th>MD</th>
@@ -35,7 +34,6 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td></td>
 						<td></td>
 						<td></td>
 						<td></td>
@@ -110,7 +108,6 @@
 					{"bSearchable": false, "bSortable": false},
 					{"bSearchable": false, "bSortable": false},
 					{"bSearchable": false, "bSortable": false},
-					{"bSearchable": false, "bSortable": false},
 					
 					{"bSearchable": false, "bSortable": false, "sWidth":"90px"}
 					],
@@ -124,7 +121,6 @@
 				  $('#winform').html('');
 				  $('#id').val('');
 				  $('#gejala_id').val('');
-				  $('#kelompok_gejala_id').val('');
 				  $('#penyakit_id').val('');
 				  $('#md').val('');
 				  $('#mb').val('');

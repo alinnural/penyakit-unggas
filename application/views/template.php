@@ -160,6 +160,11 @@
                                 <i class="fa fa-dashboard"></i> <span>Gejala</span>
                             </a>
                         </li>
+                        <li class="active">
+                            <a href="<?php echo base_url()?>kelompok_gejala">
+                                <i class="fa fa-dashboard"></i> <span>Kelompok Gejala</span>
+                            </a>
+                        </li>
 						<li class="active">
                             <a href="<?php echo base_url()?>penyakit">
                                 <i class="fa fa-dashboard"></i> <span>Penyakit</span>
