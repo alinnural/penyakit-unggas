@@ -115,6 +115,18 @@ Class gejala_penyakit_model extends CI_Model {
          $this->db->where('id',$id);
          $this->db->delete('gejala_penyakit');
      }
-
+     
+     function get_by_gejala($gejala){
+         $sql = "select distinct penyakit_id,p.kode,p.keterangan from gejala_penyakit gp inner join penyakit p on gp.penyakit_id=p.id where gejala_id in (".$gejala.") order by penyakit_id,gejala_id";
+         return $this->db->query($sql);
+     }
+     function get_gejala_by_penyakit($id,$gejala=null){
+         $sql = "select distinct gejala_id,mb,md from gejala_penyakit where penyakit_id=".$id; 
+         if($gejala!=null)
+            $sql=$sql." and gejala_id in (".$gejala.")"; 
+        $sql=$sql." order by gejala_id";
+        
+         return $this->db->query($sql);
+     }
 }
 ?>

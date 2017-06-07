@@ -57,19 +57,8 @@
 				  <!-- Main content -->
 				  <section class="content">
 						<div class="col-md-offset-1 col-md-10">
-							<div class="box box-warning">
-								<div class="box-header with-border">
-								  <h3 class="box-title">Gejala Fisik</h3>
-								</div><!-- /.box-header -->
-								<div class="box-body">
-									<!-- checkbox -->
-									<div class="form-group">
-										<label>
-											<input type="checkbox" class="minimal-red"/> tes
-										</label>
-									</div>
-								</div>
-							</div>
+							<?php $this->load->view($view)?>
+
 						</div>
 				  </section><!-- /.content -->
 				</div><!-- /.container -->

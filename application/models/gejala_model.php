@@ -74,7 +74,7 @@ Class gejala_model extends CI_Model {
 
      function get_by_param($param_name,$value){
          $this->db->select('gejala.*, kg.nama as kelompok_gejala,')->from('gejala');
-		 $this->db->join('kelompok_gejala as kg', 'kg.id = gp.kelompok_gejala_id');
+		 $this->db->join('kelompok_gejala as kg', 'kg.id = gejala.kelompok_gejala_id');
          $this->db->where($param_name,$value);
          $query = $this->db->get();
 
@@ -114,6 +114,15 @@ Class gejala_model extends CI_Model {
         $this->db->from('gejala');
         return $this->db->get();
     }
-	 
+    function get_by_kelompok($kelompok){
+        $this->db->select('*');
+        $this->db->from('gejala');
+         $this->db->where('kelompok_gejala_id',$kelompok);
+        return $this->db->get();
+    }
+     function get_list_by_id($id){
+         $sql = "select id,kode,keterangan from gejala where id in (".$id.")";
+         return $this->db->query($sql);
+     }
 }
 ?>
