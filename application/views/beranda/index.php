@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Penyakit Unggas</title>
+        <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+        <!-- bootstrap 3.0.2 -->
+        <link href="<?php echo base_url()?>asset/be/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+        <link href="<?php echo base_url()?>asset/be/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <!-- Ionicons -->
+        <link href="<?php echo base_url()?>asset/be/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <!-- DATA TABLES -->
+        <link href="<?php echo base_url()?>asset/be/css/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+        <!-- Bootstrap Color Picker -->
+        <link href="<?php echo base_url()?>asset/be/css/colorpicker/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css" />
+        <!-- Theme style -->
+        <link href="<?php echo base_url()?>asset/be/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+
+        <!-- bootstrap wysihtml5 - text editor -->
+        <!--
+        <link href="<?php echo base_url()?>asset/be/css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>asset/be/js/wysiwyg/lib/css/bootstrap.min.css" />
+		-->
+
+
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>asset/be/js/wysiwyg/src/bootstrap-wysihtml5.css" />
+
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>asset/be/css/jquery.fileupload-ui.css" />
+        <script type='text/javascript' src='<?php echo base_url();?>asset/assets/js/jquery-1.8.2.min.js'></script>
+        
+        <script src="<?php echo base_url()?>asset/be/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
+
+		<!-- bootstrap datepicker -->
+		<link href="<?php echo base_url()?>asset/be/css/datepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    </head>
+    <body class="skin-blue">
+        <div class="wrapper row-offcanvas row-offcanvas-left">
+			<header class="main-header">
+				<nav class="navbar navbar-static-top">
+				  <div class="container">
+					<div class="navbar-header">
+					  <div class="navbar-brand" style="color:#FFFFFF"><b>Deteksi Penyakit Unggas</b>
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+						<i class="fa fa-bars"></i>
+					  </button>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					  
+				  </div><!-- /.container-fluid -->
+				</nav>
+			  </header>
+			  <!-- Full Width Column -->
+			  <div class="content-wrapper">
+				<div class="container">
+				  <!-- Main content -->
+				  <section class="content">
+						<div class="col-md-offset-1 col-md-10">
+							<div class="box box-warning">
+								<div class="box-header with-border">
+								  <h3 class="box-title">Gejala Fisik</h3>
+								</div><!-- /.box-header -->
+								<div class="box-body">
+									<!-- checkbox -->
+									<div class="form-group">
+										<label>
+											<input type="checkbox" class="minimal-red"/> tes
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+				  </section><!-- /.content -->
+				</div><!-- /.container -->
+			  </div><!-- /.content-wrapper -->
+			</div><!-- ./wrapper -->
+        </div><!-- ./wrapper -->
+	<!-- add new calendar event modal -->
+	<!-- page script -->
+	<!-- jQuery 2.0.2 -->
+	 <script type='text/javascript' src='<?php echo base_url();?>asset/assets/js/jquery-1.8.2.min.js'></script>
+
+	<!-- Bootstrap -->
+	<script src="<?php echo base_url()?>asset/be/js/bootstrap.min.js" type="text/javascript"></script>
+	<!-- DATA TABES SCRIPT -->
+	<script src="<?php echo base_url()?>asset/be/js/plugins/datatables/jquery.dataTables.js" type="text/javascript"></script>
+	<script src="<?php echo base_url()?>asset/be/js/plugins/datatables/dataTables.bootstrap.js" type="text/javascript"></script>
+	<script src="<?php echo base_url()?>asset/be/js/plugins/datatables/dataTables.reload.js" type="text/javascript"></script>
+	<!-- bootstrap color picker -->
+	<script src="<?php echo base_url()?>asset/be/js/plugins/colorpicker/bootstrap-colorpicker.min.js" type="text/javascript"></script>
+
+	<script src="<?php echo base_url() ?>asset/be/js/jquery.form.js" type="text/javascript" ></script>
+
+	<!-- AdminLTE App -->
+	<script src="<?php echo base_url()?>asset/be/js/AdminLTE/app.js" type="text/javascript"></script>
+	<!-- AdminLTE for demo purposes -->
+	<script src="<?php echo base_url()?>asset/be/js/AdminLTE/demo.js" type="text/javascript"></script>
+
+	<!-- BootBox -->
+	<script src="<?php echo base_url()?>asset/be/js/bootbox.min.js" type="text/javascript"></script>
+
+	 <!-- Bootstrap WYSIHTML5 -->
+	 <!--
+	<script src="<?php echo base_url()?>asset/be/js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>
+	-->
+
+
+	<script src="<?php echo base_url()?>asset/be/js/wysiwyg/lib/js/wysihtml5-0.3.0.js"></script>
+	<script src="<?php echo base_url()?>asset/be/js/wysiwyg/src/bootstrap3-wysihtml5.js"></script>
+
+
+	 <!-- Date Picker -->
+
+	<script type="text/javascript" src="<?php echo base_url()?>asset/be/js/plugins/datepicker/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>asset/be/js/plugins/datepicker/locales/bootstrap-datetimepicker.id.js" charset="UTF-8"></script>
+
+            
+           <!-- auto complete--> 
+    <script type='text/javascript' src='<?php echo base_url();?>asset/assets/js/jquery.autocomplete.js'></script>
+
+    <!-- Memanggil file .css untuk style saat data dicari dalam filed -->
+    <link href='<?php echo base_url();?>asset/assets/js/jquery.autocomplete.css' rel='stylesheet' />
+
+    <!-- Memanggil file .css autocomplete_ci/assets/css/default.css -->
+    <link href='<?php echo base_url();?>asset/assets/css/default.css' rel='stylesheet' />
+
+        <!-- page script -->
+        <script type="text/javascript">
+            $(function() {
+                $("#example1").dataTable();
+                $('#example2').dataTable({
+                    "bPaginate": true,
+                    "bLengthChange": false,
+                    "bFilter": false,
+                    "bSort": true,
+                    "bInfo": true,
+                    "bAutoWidth": false
+                });
+
+                //Colorpicker
+                $(".my-colorpicker1").colorpicker();
+                //color picker with addon
+                $(".my-colorpicker2").colorpicker();
+    			$(".textarea").wysihtml5();
+				//$('.textarea').wysihtml5();
+            });
+        </script>
+    </body>
+</html>

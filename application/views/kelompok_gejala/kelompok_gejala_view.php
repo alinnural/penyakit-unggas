@@ -2,11 +2,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
 	<h1 style="text-align:left">
-	  Gejala Penyakit
+	  Gejala
 	</h1>
 	<ol class="breadcrumb">
 		<li><a href="<?php echo base_url()?>root"><i class="fa fa-dashboard"></i> Home</a></li>
-		<li class="active">Gejala Penyakit</li>
+		<li class="active">Kelompok Gejala</li>
 	</ol>
 </section>
 
@@ -25,19 +25,13 @@
 				<thead>
 					<tr>
 						<th>No</th>
-						<th>Gejala</th>
-						<th>Kelompok Gejala</th>
-						<th>Penyakit</th>
-						<th>MB</th>
-						<th>MD</th>
+						<th>Nama</th>
+						<th>Keterangan</th>
 						<th width="90px" >Aksi</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
 						<td></td>
 						<td></td>
 						<td></td>
@@ -57,13 +51,13 @@
         return temp;
      }
 
-	function delete_gejala_penyakit(id){
+	function delete_gejala(id){
         $(document).ready(function() {
         		bootbox.confirm("Apakah data ini akan dihapus?", function(result) {
         			if(result) {
 		   				$.ajax({
 			   				type: "POST",
-			   				url: "<?php echo base_url()?>gejala_penyakit/delete",
+			   				url: "<?php echo base_url()?>kelompok_gejala/delete",
 			   				data: "id=" + id, 
 			   				beforeSend: function (){
 
@@ -81,7 +75,7 @@
 	function window_edit(id) {
 	  $(document).ready(function() {
 		  $.ajax({
-			url: "<?php echo base_url()?>gejala_penyakit/edit",
+			url: "<?php echo base_url()?>kelompok_gejala/edit",
 			type:"POST",
 			data: "id=" + id, 
 			beforeSend: function(response){
@@ -108,26 +102,20 @@
 					{"bSearchable": false, "bSortable": false},
 					{"bSearchable": false, "bSortable": false},
 					{"bSearchable": false, "bSortable": false},
-					{"bSearchable": false, "bSortable": false},
-					{"bSearchable": false, "bSortable": false},
-					{"bSearchable": false, "bSortable": false},
 					
 					{"bSearchable": false, "bSortable": false, "sWidth":"90px"}
 					],
-				"sAjaxSource": "<?php echo base_url();?>gejala_penyakit/get_list",
+				"sAjaxSource": "<?php echo base_url();?>kelompok_gejala/get_list",
         });
 
         $('#btn-new').click(function(){
 			$.ajax({
-			  url: "<?php echo base_url()?>gejala_penyakit/add",
+			  url: "<?php echo base_url()?>kelompok_gejala/add",
 			  beforeSend: function(response){
 				  $('#winform').html('');
 				  $('#id').val('');
-				  $('#gejala_id').val('');
-				  $('#kelompok_gejala_id').val('');
-				  $('#penyakit_id').val('');
-				  $('#md').val('');
-				  $('#mb').val('');
+				  $('#nama').val('');
+				  $('#keterangan').val('');
 			  },
 			  success: function(response){
 				$("#winform").html(response);

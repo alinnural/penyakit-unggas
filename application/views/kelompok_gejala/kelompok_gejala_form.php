@@ -18,7 +18,7 @@
 
 	    $('#formedit').submit(function(){
             $.ajax({
-                url:"<?php echo base_url()?>gejala_penyakit/<?php echo $post ?>",
+                url:"<?php echo base_url()?>kelompok_gejala/<?php echo $post ?>",
  			    type:"POST",
  			    data:$('#formedit').serialize(),
  			    cache: false,
@@ -45,53 +45,27 @@
         <div class="modal-content">
             <div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">Gejala Penyakit Form</h4>
+				<h4 class="modal-title">Kelompok Gejala Form</h4>
             </div>
             <div class="modal-body">
                 <div class="box-body table-responsive">
                         <span id="form-msg">
                         </span>
-						<?php echo form_open(base_url()."gejala_penyakit/".$post,'id="formedit"')?>
+						<?php echo form_open(base_url()."kelompok_gejala/".$post,'id="formedit"')?>
                             <div class="box-body">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <input type="hidden" id="id" name="id" value="<?php echo($row['id']); ?>" />
                                         <div class="form-group">
-                                            <label>Gejala</label>
-                                            <select id="gejala_id" class="form-control" name="gejala_id" required>
-												<option></option>
-												<?php foreach($listGejala->result() as $value){?>
-													<option value="<?php echo $value->id ?>" <?php echo ($value->id == $row['gejala_id']) ? 'selected':''; ?>><?php echo $value->kode.' - '.$value->keterangan ?></option>
-												<?php } ?>
-											</select>
+                                            <label>Nama</label>
+                                            <input type="text" class="form-control" id="nama" name="nama" value="<?php echo($row['nama']); ?>" placeholder="Masukkan nama"  />
                                         </div>
                                         <div class="form-group">
-                                            <label>Kelompok Gejala</label>
-                                            <select id="kelompok_gejala_id" class="form-control" name="kelompok_gejala_id" required>
-												<option></option>
-												<?php foreach($listKelompokGejala->result() as $value){?>
-													<option value="<?php echo $value->id ?>" <?php echo ($value->id == $row['kelompok_gejala_id']) ? 'selected':''; ?>><?php echo $value->nama ?></option>
-												<?php } ?>
-											</select>
-                                        </div>
-										<div class="form-group">
-                                            <label>Penyakit</label>
-                                            <select id="penyakit_id" class="form-control" name="penyakit_id" required>
-												<option></option>
-												<?php foreach($listPenyakit->result() as $value){?>
-													<option value="<?php echo $value->id ?>" <?php echo ($value->id == $row['penyakit_id']) ? 'selected':''; ?>><?php echo $value->kode.' - '.$value->keterangan ?></option>
-												<?php } ?>
-											</select>
-                                        </div>
-										<div class="form-group">
-                                            <label>MD</label>
-                                            <input type="text" class="form-control" id="md" name="md" value="<?php echo($row['md']); ?>" placeholder="Masukkan MD"  />
-                                        </div>
-										<div class="form-group">
-                                            <label>MB</label>
-                                            <input type="text" class="form-control" id="mb" name="mb" value="<?php echo($row['mb']); ?>" placeholder="Masukkan MB"  />
+                                            <label>Keterangan</label>
+                                            <input type="text" class="form-control" id="keterangan" name="keterangan" value="<?php echo($row['keterangan']); ?>" placeholder="Masukkan keterangan"  />
                                         </div>
                                     </div>
+
                                     <div class="col-md-6">
                                     </div>
                                 </div>

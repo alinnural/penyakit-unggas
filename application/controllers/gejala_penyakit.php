@@ -7,7 +7,7 @@ Class Gejala_penyakit extends CI_Controller {
 		parent::__construct();
 		$this->load->helper(array('form', 'url'));
 		$this->load->library(array('session','form_validation'));
-		$this->load->model(array('gejala_penyakit_model','gejala_model','penyakit_model'));
+		$this->load->model(array('gejala_penyakit_model','gejala_model','penyakit_model','kelompok_gejala_model'));
 	}
 
 	function index()
@@ -25,6 +25,7 @@ Class Gejala_penyakit extends CI_Controller {
 		$data['row'] = $this->gejala_penyakit_model->get_by_id('');
 		$data['post'] = 'save';
 		$data['listGejala'] = $this->gejala_model->get_list_data(); 
+		$data['listKelompokGejala'] = $this->kelompok_gejala_model->get_list_data();
 		$data['listPenyakit'] = $this->penyakit_model->get_list_data();
 		$this->load->view('gejala_penyakit/gejala_penyakit_form',$data);
 	}
@@ -33,18 +34,21 @@ Class Gejala_penyakit extends CI_Controller {
 	{
 		$this->form_validation->set_rules('gejala_id', 'gejala_id','required|strip_tags');
 		$this->form_validation->set_rules('penyakit_id', 'penyakit_id','required|strip_tags');
+		$this->form_validation->set_rules('kelompok_gejala_id', 'kelompok_gejala_id','required|strip_tags');
 		$this->form_validation->set_rules('md', 'md','required|strip_tags');
 		$this->form_validation->set_rules('mb', 'mb','required|strip_tags');
 
 		if($this->form_validation->run() == TRUE){
 			$gejala_id=$this->input->post("gejala_id");
 			$penyakit_id=$this->input->post("penyakit_id");
+			$kelompok_gejala_id=$this->input->post("kelompok_gejala_id");
 			$md=$this->input->post("md");
 			$mb=$this->input->post("mb");
 
 			$data = array(
 				'gejala_id'=>$gejala_id,
 				'penyakit_id'=>$penyakit_id,
+				'kelompok_gejala_id'=>$kelompok_gejala_id,
 				'md'=>$md,
 				'mb'=>$mb
 			);
@@ -65,6 +69,7 @@ Class Gejala_penyakit extends CI_Controller {
 		$data['row'] = $this->gejala_penyakit_model->get_by_id($id);
 		$data['post'] = 'update';
 		$data['listGejala'] = $this->gejala_model->get_list_data(); 
+		$data['listKelompokGejala'] = $this->kelompok_gejala_model->get_list_data();
 		$data['listPenyakit'] = $this->penyakit_model->get_list_data();
 		$this->load->view('gejala_penyakit/gejala_penyakit_form',$data);
 	}
@@ -73,6 +78,7 @@ Class Gejala_penyakit extends CI_Controller {
 	{
 		$this->form_validation->set_rules('gejala_id', 'gejala_id','required|strip_tags');
 		$this->form_validation->set_rules('penyakit_id', 'penyakit_id','required|strip_tags');
+		$this->form_validation->set_rules('kelompok_gejala_id', 'kelompok_gejala_id','required|strip_tags');
 		$this->form_validation->set_rules('md', 'md','required|strip_tags');
 		$this->form_validation->set_rules('mb', 'mb','required|strip_tags');
 
@@ -80,12 +86,14 @@ Class Gejala_penyakit extends CI_Controller {
 			$id=$this->input->post("id");
 			$gejala_id=$this->input->post("gejala_id");
 			$penyakit_id=$this->input->post("penyakit_id");
+			$kelompok_gejala_id=$this->input->post("kelompok_gejala_id");
 			$md=$this->input->post("md");
 			$mb=$this->input->post("mb");
 
 			$data = array(
 				'gejala_id'=>$gejala_id,
 				'penyakit_id'=>$penyakit_id,
+				'kelompok_gejala_id'=>$kelompok_gejala_id,
 				'md'=>$md,
 				'mb'=>$mb
 			);
@@ -145,6 +153,7 @@ Class Gejala_penyakit extends CI_Controller {
 			$record = array();
 			$record[] = ++$i;
 			$record[] = $temp->gejala;
+			$record[] = $temp->kelompok_gejala;
 			$record[] = $temp->penyakit;
 			$record[] = $temp->md;
 			$record[] = $temp->mb;
