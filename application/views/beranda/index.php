@@ -39,16 +39,22 @@
 			<header class="main-header">
 				<nav class="navbar navbar-static-top">
 				  <div class="container">
-					<div class="navbar-header">
-					  <div class="navbar-brand" style="color:#FFFFFF"><b>Deteksi Penyakit Unggas</b>
-					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
-						<i class="fa fa-bars"></i>
-					  </button>
-					</div>
-
+					  <div class="navbar-header" style="float:left;">
+						  <div class="navbar-brand">
+							  <a style="color:#FFFFFF;" href="<?php echo base_url('beranda')?>"><b>Deteksi Penyakit Unggas</b></a>
+						  </div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
-					  
-				  </div><!-- /.container-fluid -->
+					  </div><!-- /.container-fluid -->
+					  <div style="float: right">
+						  <div class="navbar-brand" style="color:#FFFFFF;">
+							  <?php if($this->session->userdata('LOGGED_IN') == TRUE){?>
+								  <a href="<?php echo base_url('gejala')?>" class="btn btn-default">Pengolahan Data</a>
+							  <?php }else{?>
+								  <a href="<?php echo base_url('login')?>" class="btn btn-default">Login</a>
+							  <?php }?>
+						  </div>
+					  </div>
+					  <div style="clear: both"></div>
 				</nav>
 			  </header>
 			  <!-- Full Width Column -->

@@ -89,7 +89,7 @@
 </div>  
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="<?php echo base_url()?>root" class="logo" style="font-family:'Calibri',Arial,Verdana;font-weight:bold">
+            <a href="<?php echo base_url('beranda')?>" class="logo" style="font-family:'Calibri',Arial,Verdana;font-weight:bold">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                  Penyakit Unggas
             </a>
@@ -116,18 +116,17 @@
                                 <li class="user-header bg-light-blue">
                                     <img src="<?php echo base_url()?>asset/be/img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
-                                        <?php print($this->session->userdata('m_user_fullname')) ?> - <?php print($this->session->userdata('m_user_role_name')) ?>
-                                        <small><?php print($this->session->userdata('m_user_email')) ?></small>
+                                        <?php echo $this->session->userdata('NAMA')?>
                                     </p>
                                 </li>
                                 <!-- Menu Body -->
                                 <!-- Menu Footer-->
                                 <li class="user-footer">
                                      <div class="pull-left">
-                                        <a href="#myModal" data-toggle="modal" class="btn btn-default btn-flat">Change Password</a>
+                                        <a href="#" data-toggle="modal" class="btn btn-default btn-flat">Ubah Password</a>
                                     </div>
                                     <div class="pull-right">
-                                        <a href="<?php echo base_url()?>root/logout" class="btn btn-default btn-flat">Sign out</a>
+                                        <a href="<?php echo base_url()?>login/logout" class="btn btn-default btn-flat">Keluar</a>
                                     </div>
 
                                 </li>
@@ -148,7 +147,7 @@
                             <img src="<?php echo base_url()?>asset/be/img/avatar3.png" class="img-circle" alt="User Image" />
                         </div>
                         <div class="pull-left info">
-                            <p>Hello, <?php print($this->session->userdata('m_user_fullname')) ?></p>
+                            <p>Hello, <?php echo $this->session->userdata('NAMA')?></p>
 
                             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                         </div>  
@@ -209,8 +208,6 @@
 
         <!-- AdminLTE App -->
         <script src="<?php echo base_url()?>asset/be/js/AdminLTE/app.js" type="text/javascript"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="<?php echo base_url()?>asset/be/js/AdminLTE/demo.js" type="text/javascript"></script>
 
         <!-- BootBox -->
         <script src="<?php echo base_url()?>asset/be/js/bootbox.min.js" type="text/javascript"></script>

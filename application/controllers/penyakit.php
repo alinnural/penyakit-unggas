@@ -8,6 +8,9 @@ Class Penyakit extends CI_Controller {
 		$this->load->helper(array('form', 'url'));
 		$this->load->library(array('session','form_validation'));
 		$this->load->model(array('penyakit_model'));
+
+		$this->load->library("UserLibrary");
+		$this->userlibrary->authCheck();
 	}
 
 	function index()
