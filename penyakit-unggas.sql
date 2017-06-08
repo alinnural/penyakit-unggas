@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 07 Jun 2017 pada 08.26
--- Versi Server: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Generation Time: Jun 07, 2017 at 08:19 PM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,7 +23,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gejala`
+-- Table structure for table `gejala`
 --
 
 CREATE TABLE `gejala` (
@@ -34,17 +34,27 @@ CREATE TABLE `gejala` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `gejala`
+-- Dumping data for table `gejala`
 --
 
 INSERT INTO `gejala` (`id`, `kelompok_gejala_id`, `kode`, `keterangan`) VALUES
-(6, 1, 'G0001', 'Ngorok'),
-(7, 2, 'G0002', 'Kotoran berwarna hijau');
+(1, 1, 'G001', 'Napsu makan berkurang'),
+(2, 1, 'G002', 'Ngorok'),
+(3, 1, 'G003', 'Sesak napas'),
+(4, 1, 'G004', 'Ayam mengantuk'),
+(5, 1, 'G005', 'Terdapat kerak dihidung'),
+(6, 1, 'G006', 'Ayam mengeleng-geleng kepala'),
+(7, 2, 'G007', 'Mencret'),
+(8, 1, 'G008', 'Jengger kebiruan'),
+(9, 2, 'G009', 'Kotoran berwarna kuning/biru'),
+(10, 2, 'G010', 'Kotoran berwarna merah/ada darah'),
+(11, 2, 'G011', 'Sekitar pantat kotoran putih'),
+(12, 2, 'G012', 'Kotoran putih');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `gejala_penyakit`
+-- Table structure for table `gejala_penyakit`
 --
 
 CREATE TABLE `gejala_penyakit` (
@@ -56,38 +66,65 @@ CREATE TABLE `gejala_penyakit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `gejala_penyakit`
+-- Dumping data for table `gejala_penyakit`
 --
 
 INSERT INTO `gejala_penyakit` (`id`, `gejala_id`, `penyakit_id`, `md`, `mb`) VALUES
-(1, 6, 4, 0.1, 0.9),
-(2, 7, 5, 0.2, 0.8);
+(1, 1, 1, 0.7, 0.3),
+(2, 2, 1, 0.7, 0.3),
+(3, 3, 1, 0.7, 0.3),
+(4, 8, 1, 0.1, 0.9),
+(5, 9, 1, 0.4, 0.6),
+(6, 1, 2, 0.7, 0.3),
+(7, 2, 2, 0.7, 0.3),
+(8, 3, 2, 0.6, 0.4),
+(9, 7, 2, 0.4, 0.6),
+(10, 8, 2, 0.75, 0.25),
+(11, 9, 2, 0.1, 0.9),
+(12, 10, 2, 0.5, 0.5),
+(13, 1, 3, 0.8, 0.2),
+(14, 2, 3, 0.8, 0.2),
+(15, 3, 3, 0.75, 0.25),
+(16, 7, 3, 0.4, 0.6),
+(17, 8, 3, 0.6, 0.4),
+(18, 9, 3, 0.6, 0.4),
+(19, 1, 4, 0.8, 0.2),
+(20, 2, 4, 0.9, 0.1),
+(21, 3, 4, 0.8, 0.2),
+(22, 4, 4, 0.9, 0.1),
+(23, 7, 4, 0.55, 0.45),
+(24, 11, 4, 0.2, 0.8),
+(25, 12, 4, 0.1, 0.9),
+(26, 1, 5, 0.8, 0.2),
+(27, 2, 5, 0.3, 0.7),
+(28, 3, 5, 0.2, 0.8),
+(29, 4, 5, 0.4, 0.6),
+(30, 5, 5, 0.9, 0.1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kelompok_gejala`
+-- Table structure for table `kelompok_gejala`
 --
 
 CREATE TABLE `kelompok_gejala` (
   `id` int(11) NOT NULL,
-  `nama` varchar(15) NOT NULL,
+  `nama` varchar(20) NOT NULL,
   `keterangan` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `kelompok_gejala`
+-- Dumping data for table `kelompok_gejala`
 --
 
 INSERT INTO `kelompok_gejala` (`id`, `nama`, `keterangan`) VALUES
 (1, 'Gejala Fisik', '-'),
-(2, 'Gejala Kotoran', '-'),
-(3, 'Gejala Gatau', '-');
+(2, 'Gejala Pencernaan', '-');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `penyakit`
+-- Table structure for table `penyakit`
 --
 
 CREATE TABLE `penyakit` (
@@ -97,12 +134,15 @@ CREATE TABLE `penyakit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data untuk tabel `penyakit`
+-- Dumping data for table `penyakit`
 --
 
 INSERT INTO `penyakit` (`id`, `kode`, `keterangan`) VALUES
-(4, 'P0001', 'Tetelo'),
-(5, 'P0002', 'Corella');
+(1, 'P001', 'Terelo/ND'),
+(2, 'P002', 'Corela'),
+(3, 'P003', 'Colibacilus'),
+(4, 'P004', 'Pullorum/Berak Kapus'),
+(5, 'P005', 'Coriza/Snot');
 
 --
 -- Indexes for dumped tables
@@ -143,12 +183,12 @@ ALTER TABLE `penyakit`
 -- AUTO_INCREMENT for table `gejala`
 --
 ALTER TABLE `gejala`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `gejala_penyakit`
 --
 ALTER TABLE `gejala_penyakit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `kelompok_gejala`
 --
@@ -160,17 +200,17 @@ ALTER TABLE `kelompok_gejala`
 ALTER TABLE `penyakit`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `gejala`
+-- Constraints for table `gejala`
 --
 ALTER TABLE `gejala`
   ADD CONSTRAINT `gejala_ibfk_1` FOREIGN KEY (`kelompok_gejala_id`) REFERENCES `kelompok_gejala` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Ketidakleluasaan untuk tabel `gejala_penyakit`
+-- Constraints for table `gejala_penyakit`
 --
 ALTER TABLE `gejala_penyakit`
   ADD CONSTRAINT `gejala_penyakit_ibfk_1` FOREIGN KEY (`gejala_id`) REFERENCES `gejala` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,

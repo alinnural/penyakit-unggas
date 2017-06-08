@@ -24,7 +24,7 @@
     <div class="box-header with-border">
         <h6 class="box-title">Hasil Diagnosa</h6>
     </div><!-- /.box-header -->
-    <div class="box-body">
+    <div class="box-body"> 
         <table id="tbl-list" class="table table-bordered table-striped">
             <tr>
                 <th width="50px">No</th>
