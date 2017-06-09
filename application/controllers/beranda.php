@@ -44,8 +44,10 @@ class Beranda extends CI_Controller {
 				}
 				if($combineCF>=0.5)
 				{
-					$penyakit[$i]=array('penyakit'=>$value->kode.' - '.$value->keterangan,
-										'kepercayaan'=>$combineCF*100);
+					$penyakit[$i]=array('kode'=>$value->kode,
+										'nama'=>$value->nama,
+										'kepercayaan'=>$combineCF*100,
+										'keterangan'=>$value->keterangan);
 					$i++;
 				}
 			}

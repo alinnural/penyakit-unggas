@@ -30,14 +30,17 @@ Class Penyakit extends CI_Controller {
 	function save()
 	{
 		$this->form_validation->set_rules('kode', 'kode','required|strip_tags');
+		$this->form_validation->set_rules('kode', 'nama','required|strip_tags');
 		$this->form_validation->set_rules('keterangan', 'keterangan','required|strip_tags');
 
 		if($this->form_validation->run() == TRUE){
 			$kode=$this->input->post("kode");
+			$nama=$this->input->post("nama");
 			$keterangan=$this->input->post("keterangan");
 
 			$data = array(
 				'kode'=>$kode,
+				'nama'=>$nama,
 				'keterangan'=>$keterangan
 			);
 			$this->penyakit_model->save($data);
@@ -62,15 +65,18 @@ Class Penyakit extends CI_Controller {
 	function update()
 	{
 		$this->form_validation->set_rules('kode', 'kode','required|strip_tags');
+		$this->form_validation->set_rules('kode', 'nama','required|strip_tags');
 		$this->form_validation->set_rules('keterangan', 'keterangan','required|strip_tags');
 
 		if($this->form_validation->run() == TRUE){
 			$id=$this->input->post("id");
 			$kode=$this->input->post("kode");
+			$nama=$this->input->post("nama");
 			$keterangan=$this->input->post("keterangan");
 
 			$data = array(
 				'kode'=>$kode,
+				'nama'=>$nama,
 				'keterangan'=>$keterangan
 			);
 
@@ -129,6 +135,7 @@ Class Penyakit extends CI_Controller {
 			$record = array();
 			$record[] = ++$i;
 			$record[] = $temp->kode;
+			$record[] = $temp->nama;
 			$record[] = $temp->keterangan;
 			$record[] = "<a href=\"#\" class=\"text-yellow\" onclick=\"javascript:window_edit('".$temp->id."');\">Edit</a>&nbsp;|&nbsp;
                          <a href=\"#\"class=\"text-yellow\" onclick=\"javascript:delete_penyakit('".$temp->id."');\">Delete</a>";

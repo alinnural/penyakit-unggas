@@ -26,6 +26,7 @@
 					<tr>
 						<th>No</th>
 						<th>Kode</th>
+						<th>Nama</th>
 						<th>Keterangan</th>
 						<th width="90px" >Aksi</th>
 					</tr>
@@ -102,6 +103,7 @@
 					{"bSearchable": false, "bSortable": false},
 					{"bSearchable": false, "bSortable": false},
 					{"bSearchable": false, "bSortable": false},
+					{"bSearchable": false, "bSortable": false},
 					
 					{"bSearchable": false, "bSortable": false, "sWidth":"90px"}
 					],
@@ -115,6 +117,7 @@
 				  $('#winform').html('');
 				  $('#id').val('');
 				  $('#kode').val('');
+				  $('#nama').val('');
 				  $('#keterangan').val('');
 			  },
 			  success: function(response){

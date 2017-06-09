@@ -61,8 +61,12 @@
                                             <input type="text" class="form-control" id="kode" name="kode" value="<?php echo($row['kode']); ?>" placeholder="Masukkan kode"  />
                                         </div>
                                         <div class="form-group">
+                                            <label>Nama</label>
+                                            <input type="text" class="form-control" id="keterangan" name="keterangan" value="<?php echo($row['keterangan']); ?>" placeholder="Masukkan Nama"  />
+                                        </div>
+                                        <div class="form-group">
                                             <label>Keterangan</label>
-                                            <input type="text" class="form-control" id="keterangan" name="keterangan" value="<?php echo($row['keterangan']); ?>" placeholder="Masukkan keterangan"  />
+                                            <textarea type="text" class="form-control" name="keterangan" id="keterangan" placeholder="Masukkan keterangan"><?php echo($row['keterangan']);?></textarea>
                                         </div>
                                     </div>
 

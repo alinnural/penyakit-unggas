@@ -12,11 +12,13 @@ Class penyakit_model extends CI_Model {
          if (is_object($field)==false){
              $_result["id"]="";
              $_result["kode"]="";
+             $_result["nama"]="";
              $_result["keterangan"]="";
          }
          else{
             $_result["id"]=$field->id;
             $_result["kode"]=$field->kode;
+            $_result["nama"]=$field->nama;
             $_result["keterangan"]=$field->keterangan;
          }
          return $_result;
