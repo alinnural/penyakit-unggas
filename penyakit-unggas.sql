@@ -1,14 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 4.3.10
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:3306
--- Generation Time: Jun 08, 2017 at 11:52 AM
--- Server version: 5.5.42
--- PHP Version: 5.6.6
+-- Host: 127.0.0.1
+-- Generation Time: Jun 09, 2017 at 09:10 AM
+-- Server version: 10.1.19-MariaDB
+-- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `penyakit-unggas`
@@ -25,7 +31,7 @@ CREATE TABLE `gejala` (
   `kelompok_gejala_id` int(11) NOT NULL,
   `kode` varchar(5) NOT NULL,
   `keterangan` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gejala`
@@ -57,7 +63,7 @@ CREATE TABLE `gejala_penyakit` (
   `penyakit_id` int(11) NOT NULL,
   `md` float NOT NULL,
   `mb` float NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gejala_penyakit`
@@ -105,7 +111,7 @@ CREATE TABLE `kelompok_gejala` (
   `id` int(11) NOT NULL,
   `nama` varchar(20) NOT NULL,
   `keterangan` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `kelompok_gejala`
@@ -124,39 +130,20 @@ INSERT INTO `kelompok_gejala` (`id`, `nama`, `keterangan`) VALUES
 CREATE TABLE `penyakit` (
   `id` int(11) NOT NULL,
   `kode` varchar(5) NOT NULL,
+  `nama` varchar(50) NOT NULL,
   `keterangan` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `penyakit`
 --
 
-INSERT INTO `penyakit` (`id`, `kode`, `keterangan`) VALUES
-(1, 'P001', 'Terelo/ND'),
-(2, 'P002', 'Corela'),
-(3, 'P003', 'Colibacilus'),
-(4, 'P004', 'Pullorum/Berak Kapus'),
-(5, 'P005', 'Coriza/Snot');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user`
---
-
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `nama` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `username`, `password`, `nama`) VALUES
-(1, 'expert', '25D55AD283AA400AF464C76D713C07AD', 'Expert');
+INSERT INTO `penyakit` (`id`, `kode`, `nama`, `keterangan`) VALUES
+(1, 'P001', 'Terelo/ND', 'Terjadi karena infeksi viral yang berakibat gangguan pada saraf pernafasan, virus yang membawa penyakit ini adalah virus paramyxo'),
+(2, 'P002', 'Corela', 'Penyakit ini sangat erat hubungannya dengan berbagai faktor pemicu stress seperti fluktuasi cuaca, kelembaban, pindah kandang, dan transportasi'),
+(3, 'P003', 'Colibacilus', 'Colibacillosis merupakan penyakit yang disebabkan oleh bakteri Escherichia coli. E. coli tersebut menyerang ayam pada berbagai tingkatan umur'),
+(4, 'P004', 'Pullorum/Berak Kapus', 'Penyakit ini menimbulkan mortalitas yang sangat tinggi pada anak ayam umur 1-10 hari dan memiliki masa inkubasi 7 hari'),
+(5, 'P005', 'Coriza/Snot', 'Penyakit yang menyerang sistem pernapasan dan disebabkan oleh bakteri');
 
 --
 -- Indexes for dumped tables
@@ -166,13 +153,16 @@ INSERT INTO `user` (`id`, `username`, `password`, `nama`) VALUES
 -- Indexes for table `gejala`
 --
 ALTER TABLE `gejala`
-  ADD PRIMARY KEY (`id`), ADD KEY `kelompok_gejala_id` (`kelompok_gejala_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `kelompok_gejala_id` (`kelompok_gejala_id`);
 
 --
 -- Indexes for table `gejala_penyakit`
 --
 ALTER TABLE `gejala_penyakit`
-  ADD PRIMARY KEY (`id`), ADD KEY `gejala_id` (`gejala_id`), ADD KEY `penyakit_id` (`penyakit_id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `gejala_id` (`gejala_id`),
+  ADD KEY `penyakit_id` (`penyakit_id`);
 
 --
 -- Indexes for table `kelompok_gejala`
@@ -187,12 +177,6 @@ ALTER TABLE `penyakit`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -200,27 +184,22 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `gejala`
 --
 ALTER TABLE `gejala`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `gejala_penyakit`
 --
 ALTER TABLE `gejala_penyakit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT for table `kelompok_gejala`
 --
 ALTER TABLE `kelompok_gejala`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `penyakit`
 --
 ALTER TABLE `penyakit`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Constraints for dumped tables
 --
@@ -229,11 +208,15 @@ ALTER TABLE `user`
 -- Constraints for table `gejala`
 --
 ALTER TABLE `gejala`
-ADD CONSTRAINT `gejala_ibfk_1` FOREIGN KEY (`kelompok_gejala_id`) REFERENCES `kelompok_gejala` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `gejala_ibfk_1` FOREIGN KEY (`kelompok_gejala_id`) REFERENCES `kelompok_gejala` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `gejala_penyakit`
 --
 ALTER TABLE `gejala_penyakit`
-ADD CONSTRAINT `gejala_penyakit_ibfk_1` FOREIGN KEY (`gejala_id`) REFERENCES `gejala` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-ADD CONSTRAINT `gejala_penyakit_ibfk_2` FOREIGN KEY (`penyakit_id`) REFERENCES `penyakit` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `gejala_penyakit_ibfk_1` FOREIGN KEY (`gejala_id`) REFERENCES `gejala` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `gejala_penyakit_ibfk_2` FOREIGN KEY (`penyakit_id`) REFERENCES `penyakit` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
