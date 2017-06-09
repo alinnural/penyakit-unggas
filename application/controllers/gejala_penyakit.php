@@ -8,6 +8,9 @@ Class Gejala_penyakit extends CI_Controller {
 		$this->load->helper(array('form', 'url'));
 		$this->load->library(array('session','form_validation'));
 		$this->load->model(array('gejala_penyakit_model','gejala_model','penyakit_model','kelompok_gejala_model'));
+
+		$this->load->library("UserLibrary");
+		$this->userlibrary->authCheck();
 	}
 
 	function index()

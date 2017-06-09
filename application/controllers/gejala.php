@@ -8,10 +8,13 @@ Class Gejala extends CI_Controller {
 		$this->load->helper(array('form', 'url'));
 		$this->load->library(array('session','form_validation'));
 		$this->load->model(array('gejala_model','kelompok_gejala_model'));
+
+		$this->load->library("UserLibrary");
+		$this->userlibrary->authCheck();
 	}
 
 	function index()
-	{ 
+	{
 		$data["title"] = "";
 		$data["sub_title"] = "";
 		$rows = $this->gejala_model->get_all();
