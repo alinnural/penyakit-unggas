@@ -89,8 +89,6 @@
 
 	<!-- AdminLTE App -->
 	<script src="<?php echo base_url()?>asset/be/js/AdminLTE/app.js" type="text/javascript"></script>
-	<!-- AdminLTE for demo purposes -->
-	<script src="<?php echo base_url()?>asset/be/js/AdminLTE/demo.js" type="text/javascript"></script>
 
 	<!-- BootBox -->
 	<script src="<?php echo base_url()?>asset/be/js/bootbox.min.js" type="text/javascript"></script>
