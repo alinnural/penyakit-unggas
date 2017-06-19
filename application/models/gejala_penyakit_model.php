@@ -28,7 +28,7 @@ Class gejala_penyakit_model extends CI_Model {
      }
 
      function get_all($status=''){
-         $this->db->select('gp.*, g.kode as kode_gejala, g.keterangan as gejala, p.kode as kode_penyakit, p.keterangan as penyakit')->from('gejala_penyakit as gp');
+         $this->db->select('gp.*, g.kode as kode_gejala, g.keterangan as gejala, p.kode as kode_penyakit, p.nama as penyakit')->from('gejala_penyakit as gp');
 		 $this->db->join('gejala as g', 'g.id = gp.gejala_id');
 		 $this->db->join('penyakit as p', 'p.id = gp.penyakit_id');
          if ($status=='y'){
@@ -60,7 +60,7 @@ Class gejala_penyakit_model extends CI_Model {
      }
 
      function get_last_record(){
-         $this->db->select('gp.*, g.kode as kode_gejala, g.keterangan as gejala, p.kode as kode_penyakit, p.keterangan as penyakit')->from('gejala_penyakit as gp');
+         $this->db->select('gp.*, g.kode as kode_gejala, g.keterangan as gejala, p.kode as kode_penyakit, p.nama as penyakit')->from('gejala_penyakit as gp');
 		 $this->db->join('gejala as g', 'g.id = gp.gejala_id');
 		 $this->db->join('penyakit as p', 'p.id = gp.penyakit_id');
          $this->db->order_by("id", "desc");
@@ -79,7 +79,7 @@ Class gejala_penyakit_model extends CI_Model {
      }
 
      function get_by_param($param_name,$value){
-         $this->db->select('gp.*, g.kode as kode_gejala, g.keterangan as gejala, p.kode as kode_penyakit, p.keterangan as penyakit')->from('gejala_penyakit as gp');
+         $this->db->select('gp.*, g.kode as kode_gejala, g.keterangan as gejala, p.kode as kode_penyakit, p.nama as penyakit')->from('gejala_penyakit as gp');
 		 $this->db->join('gejala as g', 'g.id = gp.gejala_id');
 		 $this->db->join('penyakit as p', 'p.id = gp.penyakit_id');
          $this->db->where($param_name,$value);
@@ -92,7 +92,7 @@ Class gejala_penyakit_model extends CI_Model {
      }
 
      function get_search($start, $rows, $search){
-         $sql = "SELECT `gp`.*, `g`.`kode` as kode_gejala, `g`.`keterangan` as gejala, `p`.`kode` as kode_penyakit, `p`.`keterangan` as penyakit 
+         $sql = "SELECT `gp`.*, `g`.`kode` as kode_gejala, `g`.`keterangan` as gejala, `p`.`kode` as kode_penyakit, `p`.`nama` as penyakit 
 					FROM (`gejala_penyakit` as gp) JOIN `gejala` as g ON `g`.`id` = `gp`.`gejala_id` JOIN `penyakit` as p ON `p`.`id` = `gp`.`penyakit_id` 
 					WHERE gp.id like '%".$search."%' order by gp.id asc limit ".$start.",".$rows;
          return $this->db->query($sql);

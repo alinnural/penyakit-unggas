@@ -2,7 +2,7 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
 	<h1 style="text-align:left">
-	  Gejala
+	  Kelompok Gejala
 	</h1>
 	<ol class="breadcrumb">
 		<li><a href="<?php echo base_url()?>root"><i class="fa fa-dashboard"></i> Home</a></li>

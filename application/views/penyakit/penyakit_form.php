@@ -41,11 +41,11 @@
     });
 </script>
 
-    <div class="modal-dialog" style="width: 800px;">
+    <div class="modal-dialog" >
         <div class="modal-content">
             <div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">penyakit Form</h4>
+				<h4 class="modal-title">Penyakit Form</h4>
             </div>
             <div class="modal-body">
                 <div class="box-body table-responsive">
@@ -62,7 +62,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Nama</label>
-                                            <input type="text" class="form-control" id="keterangan" name="keterangan" value="<?php echo($row['keterangan']); ?>" placeholder="Masukkan Nama"  />
+                                            <input type="text" class="form-control" id="keterangan" name="keterangan" value="<?php echo($row['nama']); ?>" placeholder="Masukkan Nama"  />
                                         </div>
                                         <div class="form-group">
                                             <label>Keterangan</label>

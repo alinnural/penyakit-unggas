@@ -156,22 +156,22 @@
                     <ul class="sidebar-menu">
 						<li class="active">
                             <a href="<?php echo base_url()?>gejala">
-                                <i class="fa fa-dashboard"></i> <span>Gejala</span>
+                                <i class="fa fa-dot-circle-o"></i> <span>Gejala</span>
                             </a>
                         </li>
                         <li class="active">
                             <a href="<?php echo base_url()?>kelompok_gejala">
-                                <i class="fa fa-dashboard"></i> <span>Kelompok Gejala</span>
+                                <i class="fa fa-dot-circle-o"></i> <span>Kelompok Gejala</span>
                             </a>
                         </li>
 						<li class="active">
                             <a href="<?php echo base_url()?>penyakit">
-                                <i class="fa fa-dashboard"></i> <span>Penyakit</span>
+                                <i class="fa fa-dot-circle-o"></i> <span>Penyakit</span>
                             </a>
                         </li>
 						<li class="active">
                             <a href="<?php echo base_url()?>gejala_penyakit">
-                                <i class="fa fa-dashboard"></i> <span>Gejala Penyakit</span>
+                                <i class="fa fa-dot-circle-o"></i> <span>Gejala Penyakit</span>
                             </a>
                         </li>
                     </ul>

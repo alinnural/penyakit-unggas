@@ -41,7 +41,7 @@
     });
 </script>
 
-    <div class="modal-dialog" style="width: 800px;">
+    <div class="modal-dialog" >
         <div class="modal-content">
             <div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>

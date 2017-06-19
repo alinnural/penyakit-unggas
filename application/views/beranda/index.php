@@ -45,6 +45,7 @@
 						  </div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					  </div><!-- /.container-fluid -->
+
 					  <div style="float: right">
 						  <div class="navbar-brand" style="color:#FFFFFF;">
 							  <?php if($this->session->userdata('LOGGED_IN') == TRUE){?>
@@ -56,17 +57,17 @@
 					  </div>
 					  <div style="clear: both"></div>
 				</nav>
-			  </header>
+			  </header>  
+
+			  <div class="jumbotron" style="background: url('<?php echo base_url()?>asset/img/bg-ayam.png'); margin-bottom: -100px; margin-top: -20px; height:200px;">
+			  </div>
 			  <!-- Full Width Column -->
 			  <div class="content-wrapper">
 				<div class="container">
 				  <!-- Main content -->
-				  <section class="content">
-						<div class="col-md-offset-1 col-md-10">
-							<?php $this->load->view($view)?>
-
-						</div>
-				  </section><!-- /.content -->
+					<div class="col-md-offset-1 col-md-10">
+						<?php $this->load->view($view)?>
+					</div>
 				</div><!-- /.container -->
 			  </div><!-- /.content-wrapper -->
 			</div><!-- ./wrapper -->
